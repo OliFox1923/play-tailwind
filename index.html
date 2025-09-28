@@ -3,112 +3,270 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phishing Protection for Seniors: A Simple Guide</title>
+    <meta name="description" content="A comprehensive guide to phishing protection for seniors, with interactive tools and resources.">
+    <meta name="keywords" content="phishing, cybersecurity, seniors, online safety, scam prevention">
+    <meta name="author" content="Phishing Protection Guide">
+    <title>Phishing Protection for Seniors: Stay Safe Online</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Custom CSS -->
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: #f4f4f4;
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: #f8f9fa;
             color: #333;
         }
-        header {
-            background-color: #007bff;
+        .hero-section {
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .section-card {
+            background: white;
+            margin: 20px 0;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .tip-card {
+            background-color: #e7f3ff;
+            border-left: 5px solid #007bff;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .interactive-tool {
+            background-color: #f1f1f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .footer {
+            background-color: #343a40;
             color: white;
             padding: 20px;
             text-align: center;
-            border-radius: 8px;
-        }
-        h1 {
-            margin: 0;
-        }
-        section {
-            background: white;
-            margin: 20px 0;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        h2 {
-            color: #007bff;
-        }
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        .tip {
-            background-color: #e7f3ff;
-            padding: 15px;
-            margin: 10px 0;
-            border-left: 4px solid #007bff;
-            border-radius: 4px;
-        }
-        footer {
-            text-align: center;
             margin-top: 40px;
-            color: #666;
         }
+        .modal-content {
+            border-radius: 10px;
+        }
+        .quiz-question {
+            margin-bottom: 20px;
+        }
+        .feedback {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .correct { background-color: #d4edda; color: #155724; }
+        .incorrect { background-color: #f8d7da; color: #721c24; }
     </style>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Phishing Protection for Seniors: Stay Safe Online</h1>
-        <p>A straightforward guide to recognizing and avoiding phishing scams</p>
-    </header>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Phishing Protection</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#what-is-phishing">What is Phishing?</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#signs">Signs of Phishing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tips">Protection Tips</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#quiz">Interactive Quiz</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#resources">Resources</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <section>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Phishing Protection for Seniors: Stay Safe Online</h1>
+            <p class="lead">A comprehensive guide to recognizing and avoiding phishing scams, designed with seniors in mind.</p>
+            <a href="#quiz" class="btn btn-light btn-lg mt-3">Take Our Phishing Quiz</a>
+        </div>
+    </section>
+
+    <!-- What is Phishing Section -->
+    <section id="what-is-phishing" class="section-card container">
         <h2>What is Phishing?</h2>
-        <p>Phishing is a scam where cybercriminals pretend to be trustworthy (like your bank or a friend) to trick you into giving sensitive information, such as passwords or credit card numbers. It's like a fishing hook trying to catch you!</p>
+        <p>Phishing is a type of cybercrime where scammers impersonate legitimate organizations (like banks, retailers, or government agencies) to trick you into sharing sensitive information, such as passwords, credit card details, or Social Security numbers. These scams often come through emails, text messages, or phone calls.</p>
+        <div class="tip-card">
+            <strong>Think of it like a fishing hook:</strong> Scammers "bait" you with a fake message to "catch" your personal information.
+        </div>
     </section>
 
-    <section>
+    <!-- Signs of Phishing Section -->
+    <section id="signs" class="section-card container">
         <h2>Common Signs of a Phishing Attempt</h2>
-        <div class="tip">
-            <strong>Unexpected Emails or Calls:</strong> If someone contacts you out of the blue asking for personal info, be wary.
-        </div>
-        <div class="tip">
-            <strong>Urgent Language:</strong> Phrases like "Act now or your account will be suspended!" create panic to rush you.
-        </div>
-        <div class="tip">
-            <strong>Suspicious Links:</strong> Hover over links (don't click) to see if the URL looks real (e.g., bankofamerica.com vs. bankofamerica-login.net).
-        </div>
-        <div class="tip">
-            <strong>Typos or Poor Grammar:</strong> Legitimate companies proofread; scammers often don't.
-        </div>
-        <div class="tip">
-            <strong>Requests for Money or Info:</strong> Real organizations won't ask for payments via gift cards or wire transfers.
+        <div class="row">
+            <div class="col-md-6">
+                <div class="tip-card">
+                    <strong>Unexpected Contact:</strong> Emails, texts, or calls from unknown sources asking for personal details.
+                </div>
+                <div class="tip-card">
+                    <strong>Urgent or Threatening Language:</strong> Messages like "Your account will be locked!" or "Act now!" to pressure you.
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="tip-card">
+                    <strong>Suspicious Links or Attachments:</strong> Hover over links (don’t click!) to check if the URL looks legitimate.
+                </div>
+                <div class="tip-card">
+                    <strong>Poor Grammar or Typos:</strong> Legitimate organizations rarely make spelling mistakes.
+                </div>
+            </div>
         </div>
     </section>
 
-    <section>
+    <!-- Protection Tips Section -->
+    <section id="tips" class="section-card container">
         <h2>Top Tips to Protect Yourself</h2>
-        <ul>
-            <li><strong>Verify the Source:</strong> Contact the company directly using a known phone number or website, not the one provided in the suspicious message.</li>
-            <li><strong>Use Strong Passwords:</strong> Make them unique and long. Consider a password manager.</li>
-            <li><strong>Enable Two-Factor Authentication (2FA):</strong> This adds an extra layer of security to your accounts.</li>
-            <li><strong>Keep Software Updated:</strong> Updates often include security patches against scams.</li>
-            <li><strong>Don't Click Unknown Links:</strong> Type the URL yourself or use bookmarks.</li>
-            <li><strong>Report Suspicious Activity:</strong> Forward phishing emails to reportphishing@apwg.org or call the FTC at 1-877-FTC-HELP.</li>
-            <li><strong>Educate Family:</strong> Share this guide with loved ones and discuss online safety regularly.</li>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><strong>Verify the Source:</strong> Contact the organization directly using a trusted phone number or website.</li>
+            <li class="list-group-item"><strong>Use Strong, Unique Passwords:</strong> Combine letters, numbers, and symbols. Consider a password manager.</li>
+            <li class="list-group-item"><strong>Enable Two-Factor Authentication (2FA):</strong> Adds an extra security step, like a code sent to your phone.</li>
+            <li class="list-group-item"><strong>Keep Software Updated:</strong> Install updates for your devices and apps to patch security vulnerabilities.</li>
+            <li class="list-group-item"><strong>Avoid Unknown Links:</strong> Type URLs manually or use bookmarks for trusted sites.</li>
+            <li class="list-group-item"><strong>Report Scams:</strong> Forward phishing emails to reportphishing@apwg.org or contact the FTC at 1-877-FTC-HELP.</li>
         </ul>
     </section>
 
-    <section>
-        <h2>Resources for More Help</h2>
-        <ul>
-            <li><a href="https://www.ftc.gov/scams" target="_blank">FTC Consumer Advice on Scams</a></li>
-            <li><a href="https://www.aarp.org/money/scams-fraud/" target="_blank">AARP Fraud Watch Network</a></li>
-            <li><a href="https://staysafeonline.org/" target="_blank">StaySafeOnline.org</a></li>
+    <!-- Interactive Quiz Section -->
+    <section id="quiz" class="section-card container">
+        <h2>Test Your Phishing Knowledge</h2>
+        <p>Take this short quiz to see how well you can spot phishing attempts.</p>
+        <div class="interactive-tool">
+            <div class="quiz-question">
+                <p><strong>Question 1:</strong> You receive an email from your "bank" asking you to click a link to verify your account. What should you do?</p>
+                <form id="quiz-form-1">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q1" value="a">
+                        <label class="form-check-label">Click the link and enter your details.</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q1" value="b">
+                        <label class="form-check-label">Call your bank using a trusted number to verify.</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q1" value="c">
+                        <label class="form-check-label">Reply to the email with your account details.</label>
+                    </div>
+                    <button type="button" class="btn btn-primary mt-2" onclick="checkAnswer('q1', 'b', 'Correct! Always verify directly with the organization.', 'Incorrect. Never click links in unsolicited emails.')">Submit</button>
+                    <div id="feedback-1" class="feedback"></div>
+                </form>
+            </div>
+            <div class="quiz-question">
+                <p><strong>Question 2:</strong> A text message says you’ve won a prize but need to pay a fee to claim it. What’s the best action?</p>
+                <form id="quiz-form-2">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q2" value="a">
+                        <label class="form-check-label">Pay the fee using a gift card.</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q2" value="b">
+                        <label class="form-check-label">Ignore the message and report it.</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q2" value="c">
+                        <label class="form-check-label">Reply with your personal details to claim the prize.</label>
+                    </div>
+                    <button type="button" class="btn btn-primary mt-2" onclick="checkAnswer('q2', 'b', 'Correct! Legitimate prizes don’t require upfront fees.', 'Incorrect. This is a common scam tactic.')">Submit</button>
+                    <div id="feedback-2" class="feedback"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="section-card container">
+        <h2>Additional Resources</h2>
+        <ul class="list-group">
+            <li class="list-group-item"><a href="https://www.ftc.gov/scams" target="_blank" class="text-decoration-none">FTC Consumer Advice on Scams</a></li>
+            <li class="list-group-item"><a href="https://www.aarp.org/money/scams-fraud/" target="_blank" class="text-decoration-none">AARP Fraud Watch Network</a></li>
+            <li class="list-group-item"><a href="https://staysafeonline.org/" target="_blank" class="text-decoration-none">StaySafeOnline.org</a></li>
+            <li class="list-group-item"><a href="https://www.consumerfinance.gov/consumer-tools/fraud/" target="_blank" class="text-decoration-none">Consumer Financial Protection Bureau</a></li>
         </ul>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Phishing Protection Guide. Reviewed and updated for clarity and modern best practices. For questions, contact a trusted tech support.</p>
+    <!-- Contact Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Your Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Your Email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Your Question or Feedback"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Phishing Protection Guide. All rights reserved. For support, <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal" class="text-white">contact us</a>.</p>
+            <p>Reviewed and updated September 2025 for accuracy and modern best practices.</p>
+        </div>
     </footer>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+        function checkAnswer(question, correctAnswer, correctFeedback, incorrectFeedback) {
+            const selected = $(`input[name=${question}]:checked`).val();
+            const feedbackDiv = $(`#feedback-${question.charAt(1)}`);
+            if (selected === correctAnswer) {
+                feedbackDiv.removeClass('incorrect').addClass('correct').text(correctFeedback).show();
+            } else {
+                feedbackDiv.removeClass('correct').addClass('incorrect').text(incorrectFeedback).show();
+            }
+        }
+
+        $(document).ready(function() {
+            // Smooth scrolling for nav links
+            $('a[href*="#"]').on('click', function(e) {
+                e.preventDefault();
+                const target = $(this.hash);
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top - 70
+                    }, 800);
+                }
+            });
+        });
+    </script>
 </body>
 </html>
